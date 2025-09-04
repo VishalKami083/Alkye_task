@@ -19,6 +19,7 @@ def create_products_from_dataframe(dataframe):
             category=row['category'],
             price=row['price'],
             stock=row['stock']
+            created_at=row['created_at']
         )
 
 
