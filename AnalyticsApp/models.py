@@ -9,5 +9,11 @@ class Product(models.Model):
     stock = models.IntegerField()
     created_at = models.DateTimeField()
 
+    class Meta:
+        indexes = [
+            models.Index(fields=["category"]),
+            models.Index(fields=["price"]),
+        ]
+
     def __str__(self):
         return self.name
